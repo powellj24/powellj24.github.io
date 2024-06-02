@@ -1,0 +1,127 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    }
+
+  .bigname {
+    font-size: 200%; 
+  }
+  
+  h1 {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  h2 {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  h3 {
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  p.type1 {
+    line-height: 1.3;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  p.type2 {
+    line-height: 1.3;
+    margin-left: 3%;
+    margin-right: 25%;
+  }
+
+  p.type3 {
+    line-height: 1.3;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: inline-block; 
+  }
+
+  div {
+    margin-left: 22%;
+    margin-right: 22%;
+  }
+
+  a:link {
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+ /* Toggle Dark Theme */
+
+ .button {
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 0px; /* to set curve */
+  vertical-align: bottom;
+}
+
+.button:hover {
+  transition: 0.7s;
+}
+
+#theme-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.changeTheme {
+
+  #theme-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}
+
+/* Images */
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.left-align {
+  display: block;
+  text-align: left;
+  width: 100%; 
+}
+
+/* https://stackoverflow.com/questions/22592064/how-to-align-text-below-an-image-in-css */
+
+img.leftinlineimg {
+  width: 50%;
+  height: auto;
+  float:left; 
+}
+
+img.rightinlineimg {
+  width: 50%;
+  height: auto;
+  float:right; 
+}
+
+
+/* Tables */
+
+.table1 {
+  width: 94%; 
+  margin-left: 3%; 
+  margin-right: 3%; 
+  text-align: left;
+}

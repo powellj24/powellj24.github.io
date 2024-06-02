@@ -1,0 +1,89 @@
+/* colors = ["#cec5c1", "#9f8f7f", "#924a42", "#5a2028",
+        "#a4b9b1", "#4ea7a6", "#026d73", "#06494f"]; */
+
+body {
+    background-color: #fbfffe;
+    }
+
+  .bigname {
+    color: #06494f; 
+  }
+  
+  h1 {
+    color: #05383c;
+  }
+
+  h2 {
+    color: #02656b;
+  }
+
+  h3 {
+    color: #02656b;
+  }
+
+  div {
+    /* border: 3px solid #4ea7a6; */
+    /* background-color: #f8f3ee; */
+    background-color: #fbfffe;
+  }
+
+  a:link {
+    color: #428f8e;
+  }
+
+  a:hover {
+    color: #924a42;
+  }
+
+  a:visited {
+    color: #924a42;
+  }
+
+ /* Toggle Dark Theme */
+
+ .button {
+  background-color: #ddeae5;
+  border: 0px solid #06494f;
+  color: #06494f;
+}
+
+.button:hover {
+  background-color:#e1aaa4;
+  color: #5a2028;
+}
+
+#theme-btn {
+  color: #06494f;
+}
+
+#theme-btn:hover {
+  color: #5a2028;
+}
+.changeTheme {
+  background: #24262c;
+  color: #c8d5d0;
+
+  .bigname {
+    color: #a4b9b1; 
+  }
+
+  h1 {
+    color: #a4b9b1;
+  }
+
+  h2 {
+    color: #4ea7a6;
+  }
+
+  h3 {
+    color: #4ea7a6;
+  }
+
+  div {
+    background-color: #24262c;
+  }
+
+  #theme-btn {
+    color: #4ea7a6;
+  }
+}
