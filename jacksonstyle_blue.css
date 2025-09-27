@@ -52,9 +52,11 @@ body {
   color: #5a2028;
 }
 
+
 #theme-btn {
   color: #06494f;
 }
+
 
 #theme-btn:hover {
   color: #5a2028;
@@ -62,28 +64,10 @@ body {
 .changeTheme {
   background: #24262c;
   color: #c8d5d0;
-
-  .bigname {
-    color: #a4b9b1; 
-  }
-
-  h1 {
-    color: #a4b9b1;
-  }
-
-  h2 {
-    color: #4ea7a6;
-  }
-
-  h3 {
-    color: #4ea7a6;
-  }
-
-  div {
-    background-color: #24262c;
-  }
-
-  #theme-btn {
-    color: #4ea7a6;
-  }
 }
+.changeTheme .bigname { color: #a4b9b1; }
+.changeTheme h1 { color: #a4b9b1; }
+.changeTheme h2 { color: #4ea7a6; }
+.changeTheme h3 { color: #4ea7a6; }
+.changeTheme div { background-color: #24262c; }
+.changeTheme #theme-btn { color: #4ea7a6; }

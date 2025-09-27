@@ -71,36 +71,16 @@ body {
 
 
 .changeTheme {
-    /* background: #1D1E22; */
-    background: #302628;
-    color: #e6dfdc;
-
-    .bigname {
-    color: #dac3b9; 
-    }
-
-    h1 {
-    color: #cec5c1;
-    }
-
-    h2 {
-    color: #cb9690;
-    }
-
-    h3 {
-    color: #4ea7a6;
-    }
-
-    div {
-    background-color: #302628;
-    }
-
-    #theme-btn {
-    color: #a36760;
-    }
-
-    .table1 {
-        color: e6dfdc; 
-    }
+  /* background: #1D1E22; */
+  background: #302628;
+  color: #e6dfdc;
 }
+.changeTheme .bigname { color: #dac3b9; }
+.changeTheme h1 { color: #cec5c1; }
+.changeTheme h2 { color: #cb9690; }
+.changeTheme h3 { color: #4ea7a6; }
+.changeTheme div { background-color: #302628; }
+.changeTheme #theme-btn { color: #a36760; }
+.changeTheme .table1 { color: #e6dfdc; }
+
 
