@@ -2,3 +2,4 @@ User-agent: *
 Disallow: /images/
 
 Allow: /images/jacksonpfpv2.png
+Allow: /images/icon.svg
