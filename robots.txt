@@ -2,7 +2,9 @@ User-agent: *
 Disallow: /images/
 
 Allow: /images/jacksonpfpv2.png
-Allow: /images/icon/icon.svg
-Allow: /images/icon/apple-touch-icon.png
-Allow: /images/icon/favicon.ico
+
 Allow: /images/icon/favicon-96x96.png
+Allow: /images/icon/favicon.svg
+Allow: /images/icon/favicon.ico
+Allow: /images/icon/apple-touch-icon.png
+Allow: /images/icon/site.webmanifest
