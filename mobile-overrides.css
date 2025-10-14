@@ -97,28 +97,3 @@ html, body { background: #fbfffe !important; }
 
 /* Dark only when YOU toggle it via .changeTheme */
 body.changeTheme { background: #24262c !important; color: #c8d5d0 !important; }
-
-/* If an earlier @media (prefers-color-scheme: dark) darkened the body, override it */
-@media (prefers-color-scheme: dark) {
-  body { background: #fbfffe !important; color: #05383c !important; }
-}
-
-/* Optional: let inner containers be transparent so they inherit page bg */
-body > div { background: transparent !important; }
-
-/* --- Keep research.html images centered and within screen --- */
-@media (max-width: 900px) {
-  img, img.leftinlineimg, img.rightinlineimg {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 1rem auto !important;   /* centers horizontally */
-    float: none !important;
-  }
-}
-
-@media (max-width: 600px) {
-  img, img.leftinlineimg, img.rightinlineimg {
-    max-width: 90%;
-  }
-}
