@@ -91,3 +91,17 @@ body { line-height: 1.5; }
 /* 9) Tappable theme icon */
 #theme-btn { padding: 6px; }
 #theme-btn:focus { outline: 2px solid currentColor; outline-offset: 2px; }
+
+/* — Fix white center + dark gutters — */
+html, body { background: #fbfffe !important; }
+
+/* Dark only when YOU toggle it via .changeTheme */
+body.changeTheme { background: #24262c !important; color: #c8d5d0 !important; }
+
+/* If an earlier @media (prefers-color-scheme: dark) darkened the body, override it */
+@media (prefers-color-scheme: dark) {
+  body { background: #fbfffe !important; color: #05383c !important; }
+}
+
+/* Optional: let inner containers be transparent so they inherit page bg */
+body > div { background: transparent !important; }
