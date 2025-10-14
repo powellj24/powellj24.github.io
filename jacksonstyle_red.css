@@ -84,3 +84,24 @@ body {
 .changeTheme .table1 { color: #e6dfdc; }
 
 
+/* === Link color scheme for red theme (research.html) === */
+a, a:link {
+  color: #990000;             /* red by default */
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+a:visited {
+  color: #026d73;             /* blue after visit */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  a, a:link {
+    color: #6ecfd4;  /* lighter cyan version for better contrast in dark mode */
+  }
+  a:visited {
+    color: #f08080;  /* lighter red tone */
+  }
+}

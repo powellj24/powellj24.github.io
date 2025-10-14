@@ -1,20 +1,20 @@
 
-/* ===== Mobile responsiveness overrides (safe to add after current styles) =====
+/* ===== Mobile responsiveness overrides (light-mode safe) =====
    Drop this file in the same folder and link it AFTER your existing CSS files.
 
    <link rel="stylesheet" href="jacksonstyle_structure.css" />
-   <link rel="stylesheet" href="jacksonstyle_blue.css" />  <!-- or jacksonstyle_red.css on research.html -->
-   <link rel="stylesheet" href="mobile-overrides.css" />   <!-- add this line -->
+   <link rel="stylesheet" href="jacksonstyle_blue.css" />  <!-- or red -->
+   <link rel="stylesheet" href="mobile-overrides.css" />
 */
 
-/* 1) Make typography scale with viewport */
+/* 1) Responsive typography */
 .bigname { font-size: clamp(1.6rem, 5vw, 2.3rem); }
 h1 { font-size: clamp(1.4rem, 4.2vw, 2rem); }
 h2 { font-size: clamp(1.2rem, 3.6vw, 1.6rem); }
 h3 { font-size: clamp(1.1rem, 3.2vw, 1.3rem); }
 body { line-height: 1.5; }
 
-/* 2) Container gutters — progressively narrower margins on smaller screens */
+/* 2) Container gutters — progressively narrower margins */
 @media (max-width: 1200px) {
   body > div { margin-left: 12% !important; margin-right: 12% !important; }
 }
@@ -25,16 +25,20 @@ body { line-height: 1.5; }
   body > div { margin-left: 4% !important; margin-right: 4% !important; }
 }
 
-/* 3) Paragraph widths — avoid huge right margins on small screens */
+/* 3) Paragraph widths — reduce right margin */
 @media (max-width: 900px) {
   p.type2 { margin-right: 8% !important; }
 }
 @media (max-width: 680px) {
-  p.type1, p.type2, p.type3 { margin-right: 4% !important; margin-left: 4% !important; display: block !important; }
+  p.type1, p.type2, p.type3 {
+    margin-right: 4% !important;
+    margin-left: 4% !important;
+    display: block !important;
+  }
   p.type3 { width: 100% !important; }
 }
 
-/* 4) Header/nav row — let it wrap on phones */
+/* 4) Header/nav row — wrap nicely on mobile */
 @media (max-width: 680px) {
   .type1 > span:last-child {
     float: none !important;
@@ -45,34 +49,45 @@ body { line-height: 1.5; }
     align-items: center;
     margin-top: 8px;
   }
-  .button { padding: 12px 16px; font-size: 15px; } /* friendlier touch targets */
+  .button { padding: 12px 16px; font-size: 15px; }
   #theme-btn { margin-left: 4px; }
 }
 
-/* 5) Images — drop floats and make them full-width on small screens */
+/* 5) Images — make full-width on small screens */
 @media (max-width: 900px) {
-  img.leftinlineimg, img.rightinlineimg { width: 100% !important; height: auto !important; float: none !important; margin: 0 0 1rem 0 !important; }
-  /* Catch inline-styled floats (e.g., the headshot on index.html) */
-  img[style*="float:right"], img[style*='float: right'] { width: 100% !important; height: auto !important; float: none !important; margin: 0 0 1rem 0 !important; }
+  img.leftinlineimg, img.rightinlineimg {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+  }
+  img[style*="float:right"], img[style*='float: right'] {
+    width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    margin: 0 0 1rem 0 !important;
+  }
 }
 
-/* 6) Tables — make them scroll if they get too wide */
+/* 6) Tables — scroll on overflow */
 .table1 { overflow-x: auto; display: block; }
 
-/* 7) Buttons/links — improve spacing when wrapping */
+/* 7) Buttons/links — spacing when wrapping */
 .button + .button { margin-left: 0; }
 
-/* 8) Respect OS dark preference on first visit (before user toggles) */
+/* 8) Respect OS dark mode ONLY if user has not set preference */
 @media (prefers-color-scheme: dark) {
-  body:not(.changeTheme) { /* only when user hasn't chosen */
+  body:not(.theme-set):not(.changeTheme) {
     background: #24262c;
     color: #c8d5d0;
   }
-  body:not(.changeTheme) .bigname { color: #a4b9b1; }
-  body:not(.changeTheme) h1, body:not(.changeTheme) h2, body:not(.changeTheme) h3 { color: #a4b9b1; }
-  body:not(.changeTheme) #theme-btn { color: #4ea7a6; }
+  body:not(.theme-set):not(.changeTheme) .bigname { color: #a4b9b1; }
+  body:not(.theme-set):not(.changeTheme) h1,
+  body:not(.theme-set):not(.changeTheme) h2,
+  body:not(.theme-set):not(.changeTheme) h3 { color: #a4b9b1; }
+  body:not(.theme-set):not(.changeTheme) #theme-btn { color: #4ea7a6; }
 }
 
-/* 9) Tappable elements — increase hit area for the theme icon */
+/* 9) Tappable theme icon */
 #theme-btn { padding: 6px; }
 #theme-btn:focus { outline: 2px solid currentColor; outline-offset: 2px; }

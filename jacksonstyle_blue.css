@@ -71,3 +71,15 @@ body {
 .changeTheme h3 { color: #4ea7a6; }
 .changeTheme div { background-color: #24262c; }
 .changeTheme #theme-btn { color: #4ea7a6; }
+
+/* === Link color scheme for blue theme (index.html) === */
+a, a:link {
+  color: #026d73;             /* blue by default */
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+a:visited {
+  color: #990000;             /* red after visit */
+}

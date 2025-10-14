@@ -126,3 +126,13 @@ img.rightinlineimg {
   text-align: left;
 }
 
+
+
+@media (prefers-color-scheme: dark) {
+  a, a:link {
+    color: #6ecfd4;  /* lighter cyan version for better contrast in dark mode */
+  }
+  a:visited {
+    color: #f08080;  /* lighter red tone */
+  }
+}
