@@ -72,14 +72,26 @@ body {
 .changeTheme div { background-color: #24262c; }
 .changeTheme #theme-btn { color: #4ea7a6; }
 
-/* === Link color scheme for blue theme (index.html) === */
-a, a:link {
-  color: #026d73;             /* blue by default */
-  text-decoration: none;
+/* === Link color scheme for blue theme (index.html) — robust hover === */
+a, a:link { 
+  color: #026d73;               /* blue default */
+  text-decoration: none; 
 }
-a:hover, a:focus {
-  text-decoration: underline;
+a:visited { 
+  color: #924a42;               /* red when visited */
 }
-a:visited {
-  color: #990000;             /* red after visit */
+/* Place hover/focus AFTER visited so it wins on visited links too */
+a:hover, a:focus, a:visited:hover, a:visited:focus { 
+  color: #06494f;               /* darker blue on hover */
+  text-decoration: underline; 
+}
+
+
+@media (prefers-color-scheme: dark) {
+  a, a:link {
+    color: #6ecfd4;  /* lighter cyan version for better contrast in dark mode */
+  }
+  a:visited {
+    color: #f08080;  /* lighter red tone */
+  }
 }

@@ -84,16 +84,18 @@ body {
 .changeTheme .table1 { color: #e6dfdc; }
 
 
-/* === Link color scheme for red theme (research.html) === */
-a, a:link {
-  color: #990000;             /* red by default */
-  text-decoration: none;
+/* === Link color scheme for red theme (research.html) — robust hover === */
+a, a:link { 
+  color: #924a42;               /* red default */
+  text-decoration: none; 
 }
-a:hover, a:focus {
-  text-decoration: underline;
+a:visited { 
+  color: #026d73;               /* blue when visited */
 }
-a:visited {
-  color: #026d73;             /* blue after visit */
+/* Place hover/focus AFTER visited so it wins on visited links too */
+a:hover, a:focus, a:visited:hover, a:visited:focus { 
+  color: #5a2028;               /* darker red on hover */
+  text-decoration: underline; 
 }
 
 
