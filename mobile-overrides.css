@@ -75,25 +75,3 @@ body { line-height: 1.5; }
 /* 7) Buttons/links — spacing when wrapping */
 .button + .button { margin-left: 0; }
 
-/* 8) Respect OS dark mode ONLY if user has not set preference */
-@media (prefers-color-scheme: dark) {
-  body:not(.theme-set):not(.changeTheme) {
-    background: #24262c;
-    color: #c8d5d0;
-  }
-  body:not(.theme-set):not(.changeTheme) .bigname { color: #a4b9b1; }
-  body:not(.theme-set):not(.changeTheme) h1,
-  body:not(.theme-set):not(.changeTheme) h2,
-  body:not(.theme-set):not(.changeTheme) h3 { color: #a4b9b1; }
-  body:not(.theme-set):not(.changeTheme) #theme-btn { color: #4ea7a6; }
-}
-
-/* 9) Tappable theme icon */
-#theme-btn { padding: 6px; }
-#theme-btn:focus { outline: 2px solid currentColor; outline-offset: 2px; }
-
-/* — Fix white center + dark gutters — */
-html, body { background: #fbfffe !important; }
-
-/* Dark only when YOU toggle it via .changeTheme */
-body.changeTheme { background: #24262c !important; color: #c8d5d0 !important; }
