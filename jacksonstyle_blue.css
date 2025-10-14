@@ -82,14 +82,14 @@ a:visited {
 }
 /* Place hover/focus AFTER visited so it wins on visited links too */
 a:hover, a:focus, a:visited:hover, a:visited:focus { 
-  color: #06494f;               /* darker blue on hover */
+  color: #924a42;               /* darker blue on hover */
   text-decoration: underline; 
 }
 
 
 @media (prefers-color-scheme: dark) {
   a, a:link {
-    color: #6ecfd4;  /* lighter cyan version for better contrast in dark mode */
+    color: #f08080;  /* lighter cyan version for better contrast in dark mode */
   }
   a:visited {
     color: #f08080;  /* lighter red tone */
