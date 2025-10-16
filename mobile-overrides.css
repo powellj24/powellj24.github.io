@@ -11,7 +11,7 @@
 .bigname { font-size: clamp(1.6rem, 5vw, 2.3rem); }
 h1 { font-size: clamp(1.4rem, 4.2vw, 2rem); }
 h2 { font-size: clamp(1.2rem, 3.6vw, 1.6rem); }
-h3 { font-size: clamp(1.1rem, 3.2vw, 1.3rem); }
+h3 { font-size: clamp(0.95rem, 0.95vw, 0.95rem); }
 body { line-height: 1.5; }
 
 /* 2) Container gutters — progressively narrower margins */

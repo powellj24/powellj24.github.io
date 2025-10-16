@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /images/
+Disallow: /images/pubs/
 
 Allow: /images/jacksonpfpv2.png
 

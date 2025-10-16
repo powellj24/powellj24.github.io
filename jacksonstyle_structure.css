@@ -17,8 +17,8 @@ body {
   }
 
   h3 {
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 
   p.type1 {
@@ -127,3 +127,105 @@ img.rightinlineimg {
 }
 
 
+
+
+/* Publications layout */
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+/* Publications layout — full-width like the text above */
+/* ==== Publications: theme-aware variables ==== */
+:root {
+  /* Light mode */
+  --pub-bg: #dac3b9;                 /* your box color */
+  --pub-text: #3b1a1c;               /* dark text on light box */
+  --pub-shadow: rgba(0,0,0,.08);
+  --pub-btn-bg: rgba(255,255,255,.9);
+  --pub-btn-text: #5a2028;
+  --pub-btn-border: rgba(0,0,0,.15);
+}
+
+.changeTheme {
+  /* Dark mode */
+  --pub-bg: #5a4347;                 /* slightly deeper so it reads on dark page */
+  --pub-text: #fff3f1;               /* light text on pink box */
+  --pub-shadow: rgba(0,0,0,.45);
+  --pub-btn-bg: rgba(255,255,255,.12);
+  --pub-btn-text: #e6dfdc;
+  --pub-btn-border: rgba(255,255,255,.25);
+}
+
+/* ==== Publications layout (theme-aware) ==== */
+/* Make section align with the main text column and neutralize the global div margins */
+#publications { width: 94%; margin: 0 3% 2rem 3%; }
+#publications div { margin-left: 0 !important; margin-right: 0 !important; background: transparent; }
+
+/* One full-width card per row */
+#publications .pub-grid { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
+
+#publications .pub-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+  align-items: start;
+  background: var(--pub-bg);
+  color: var(--pub-text);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 10px var(--pub-shadow);
+}
+
+/* ensure children don’t pick up site-wide backgrounds, widths, etc. */
+#publications .pub-card *,
+#publications .pub-card *::before,
+#publications .pub-card *::after { box-sizing: border-box; background: transparent; }
+
+#publications .pub-thumb {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%; /* Optional: defines thumbnail width in grid */
+  max-width: 160px;
+}
+
+#publications .pub-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#publications .pub-meta { display:flex; flex-direction:column; gap:10px; }
+#publications .pub-citation { margin:0; line-height:1.4; color: inherit; }
+#publications .pub-citation a { color: inherit; text-decoration: underline; }
+
+/* Buttons that adapt to theme */
+#publications .pub-links { display:flex; flex-wrap:wrap; gap:8px; }
+#publications .pub-btn {
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:8px;
+  text-decoration:none;
+  border:1px solid var(--pub-btn-border);
+  background: var(--pub-btn-bg);
+  color: var(--pub-btn-text);
+  transition: transform .05s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+#publications .pub-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.98);
+  color: #5a2028;
+  border-color: rgba(0,0,0,.2);
+}
+.changeTheme #publications .pub-btn:hover {
+  background: rgba(255,255,255,.18);
+  color: #fff3f1;
+  border-color: rgba(255,255,255,.35);
+}
+
+/* One full-width card per row */
+#publications .pub-grid { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
+
+@media (max-width: 640px) {
+  #publications .pub-card { grid-template-columns: 1fr; }
+  #publications .pub-thumb { height: 220px; }   /* sensible cap for phones */
+}

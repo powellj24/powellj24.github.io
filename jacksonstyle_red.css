@@ -18,9 +18,13 @@ body {
     }
 
     h3 {
-    color: #924a42;
+      color: #924a42;
+      font-size: 0.1rem;       /* smaller text (default body size) */
+      font-weight: 600;      /* optional: keep it boldish if desired */
+      margin-top: 1rem;      /* optional: tighten spacing */
+      margin-bottom: 1rem;
     }
-
+    
     div {
     /* border: 3px solid #4ea7a6; */
     /* background-color: #f8f3ee; */
@@ -78,7 +82,7 @@ body {
 .changeTheme .bigname { color: #dac3b9; }
 .changeTheme h1 { color: #cec5c1; }
 .changeTheme h2 { color: #cb9690; }
-.changeTheme h3 { color: #4ea7a6; }
+.changeTheme h3 { color: #cb9690; }
 .changeTheme div { background-color: #302628; }
 .changeTheme #theme-btn { color: #a36760; }
 .changeTheme .table1 { color: #e6dfdc; }
@@ -107,3 +111,7 @@ a:hover, a:focus, a:visited:hover, a:visited:focus {
     color: #6ecfd4;;  /* lighter red tone */
   }
 }
+
+
+
+
