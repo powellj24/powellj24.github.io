@@ -2,11 +2,11 @@ User-agent: *
 Disallow: /images/
 Disallow: /images/pubs/
 
-Allow: /images/jacksonpfpv2.png
+Allow: pub-images/images/jacksonpfpv2.png
 
-Allow: /images/icon/favicon-96x96.png
-Allow: /images/icon/favicon.svg
-Allow: /images/icon/favicon.ico
-Allow: /favicon.ico
-Allow: /images/icon/apple-touch-icon.png
-Allow: /images/icon/site.webmanifest
+Allow: pub-images/images/icon/favicon-96x96.png
+Allow: pub-images/images/icon/favicon.svg
+Allow: pub-images/images/icon/favicon.ico
+Allow: pub-images/favicon.ico
+Allow: pub-images/images/icon/apple-touch-icon.png
+Allow: pub-images/images/icon/site.webmanifest
