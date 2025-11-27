@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="jacksonstyle_blue.css?v=2" />
   <link rel="stylesheet" href="mobile-overrides.css?v=7" />
 
-
   <link rel="icon" type="image/png" href="/pub-images/icon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/pub-images/icon/favicon.svg" />
   <link rel="shortcut icon" href="/pub-images/icon/favicon.ico" />
@@ -43,7 +42,7 @@
       "https://www.research.chop.edu/people/jackson-powell",
       "https://med.stanford.edu/profiles/jacksonpowell",
       "https://cap.stanford.edu/profiles/frdActionServlet?choiceId=printerprofile&profileversion=full&profileId=347043",
-      "https://careerservices.upenn.edu/blog/2022/01/19/puzzling-topics-in-neuroscience/",
+      "https://careerservices.upenn.edu/blog/2022/01/19/puzzling-topics-in-neuroscience/"
     ]
   }
   </script>
@@ -66,8 +65,6 @@
 
   <!-- In <head> of index.html -->
   <meta name="description" content="Jackson Powell is an MD-PhD student at Stanford in the Deisseroth lab focused on brain-computer interfaces, neuromodulation, and neurosurgery." />
-
-
 </head>
 <body>
   <div>
@@ -87,8 +84,16 @@
 
     <p><br /><br /></p>
 
+    <!-- Profile picture with hover swap -->
     <p>
-      <img src="pub-images/jacksonpfpv2.png" alt="Portrait of Jackson Powell, MD-PhD student at Stanford University" style="float:right;width:25%;height:auto" hspace="50" />
+      <img
+        id="profile-pic"
+        src="pub-images/jacksonpfpv2.png"
+        data-hover-src="pub-images/jacksonpfpv3.png"
+        alt="Portrait of Jackson Powell, MD-PhD student at Stanford University"
+        style="float:right;width:25%;height:auto"
+        hspace="50"
+      />
     </p>
 
     <h2 id="contact-information">Contact Information</h2>
@@ -163,7 +168,7 @@
     <hr width="94%" size="2" color="#026d73" noshade />
 
     <p class="type1">
-      <br />Content, drawings, and theme by me.           
+      <br />Content, doodles, and theme by me.           
       <br />
       <br />Updated as of: <span id="demo"></span>
     </p>
@@ -174,6 +179,23 @@
     (function updateFunction() {
       var x = document.lastModified;
       document.getElementById("demo").textContent = x;
+    })();
+
+    // profile picture hover swap
+    (function () {
+      var img = document.getElementById('profile-pic');
+      if (!img) return;
+
+      var originalSrc = img.src;
+      var hoverSrc = img.getAttribute('data-hover-src');
+
+      img.addEventListener('mouseenter', function () {
+        if (hoverSrc) img.src = hoverSrc;
+      });
+
+      img.addEventListener('mouseleave', function () {
+        img.src = originalSrc;
+      });
     })();
   </script>
 </body>
