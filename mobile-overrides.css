@@ -11,18 +11,14 @@
 .bigname { font-size: clamp(1.6rem, 5vw, 2.3rem); }
 h1 { font-size: clamp(1.4rem, 4.2vw, 2rem); }
 h2 { font-size: clamp(1.2rem, 3.6vw, 1.6rem); }
-h3 { font-size: clamp(0.95rem, 0.95vw, 0.95rem); }
-body { line-height: 1.5; }
+h3 { font-size: 1rem; }
+body { line-height: 1.65; }
 
-/* 2) Container gutters — progressively narrower margins */
-@media (max-width: 1200px) {
-  body > div { margin-left: 12% !important; margin-right: 12% !important; }
-}
-@media (max-width: 900px) {
-  body > div { margin-left: 8% !important; margin-right: 8% !important; }
-}
-@media (max-width: 680px) {
-  body > div { margin-left: 4% !important; margin-right: 4% !important; }
+/* 2) Container gutters — tighten padding on small screens */
+@media (max-width: 600px) {
+  body > div { padding: 0 1rem; }
+  .hero { flex-direction: column-reverse; gap: 1.5rem; padding: 1.5rem 3% 1rem; }
+  .hero-photo img { width: 130px; }
 }
 
 /* 3) Paragraph widths — reduce right margin */

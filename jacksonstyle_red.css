@@ -1,81 +1,78 @@
 /* colors = ["#cec5c1", "#9f8f7f", "#924a42", "#5a2028",
-        "#a4b9b1", "#4ea7a6", "#026d73", "#06494f"]; */
+        "#a4b9b1", "#4ea7a6", "#026d73", "#06494f"] */
 
 body {
     background-color: #fdf9f8;
     }
 
-    .bigname {
-    color: #5a2028; 
-    }
-    
-    h1 {
+  .bigname {
     color: #5a2028;
-    }
+  }
 
-    h2 {
-    color: #924a42;
-    }
+  hr { border-top-color: #9f8f7f; }
+  .changeTheme hr { border-top-color: #7a6a62; }
 
-    h3 {
-      color: #924a42;
-      font-size: 0.1rem;       /* smaller text (default body size) */
-      font-weight: 600;      /* optional: keep it boldish if desired */
-      margin-top: 1rem;      /* optional: tighten spacing */
-      margin-bottom: 1rem;
-    }
-    
-    div {
-    /* border: 3px solid #4ea7a6; */
-    /* background-color: #f8f3ee; */
+  .site-header {
     background-color: #fdf9f8;
-    }
-/* 
-    a:link {
-    color: #428f8e;
-    }
+    border-bottom: 1px solid rgba(159, 143, 127, 0.2);
+  }
+  .changeTheme .site-header {
+    background-color: #302628;
+    border-bottom: 1px solid rgba(159, 143, 127, 0.15);
+  }
 
-    a:hover {
-    color: #924a42;
-    }
-
-    a:visited {
-    color: #924a42;
-    }
- */
-
-    /* Toggle Dark Theme */
-
-    .button {
-    background-color: #dfd7cf;
-    border: 0px solid #5a2028;
+  h1 {
     color: #5a2028;
+  }
+
+  h2 {
+    color: #924a42;
+  }
+
+  h3 {
+    color: #924a42;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+ /* Toggle Dark Theme */
+
+ .button {
+  background-color: #dfd7cf;
+  color: #5a2028;
 }
 
 .button:hover {
-    background-color:#a4b9b1;
-    color: #06494f;
+  background-color: #a4b9b1;
+  color: #06494f;
+}
+
+.changeTheme .button {
+  background-color: rgba(203, 150, 144, 0.15);
+  color: #cb9690;
+}
+
+.changeTheme .button:hover {
+  background-color: rgba(164, 185, 177, 0.2);
+  color: #a4b9b1;
 }
 
 #theme-btn {
-    color: #5a2028;
+  color: #5a2028;
 }
 
 #theme-btn:hover {
-    color: #06494f;
+  color: #06494f;
 }
-
 
 /* Table */
-
 .table1 {
-    color: black; 
+  color: black;
 }
 
-
-
 .changeTheme {
-  /* background: #1D1E22; */
   background: #302628;
   color: #e6dfdc;
 }
@@ -83,35 +80,23 @@ body {
 .changeTheme h1 { color: #cec5c1; }
 .changeTheme h2 { color: #cb9690; }
 .changeTheme h3 { color: #cb9690; }
-.changeTheme div { background-color: #302628; }
 .changeTheme #theme-btn { color: #a36760; }
 .changeTheme .table1 { color: #e6dfdc; }
 
-
-/* === Link color scheme for red theme (research.html) — robust hover === */
-a, a:link { 
-  color: #924a42;               /* red default */
-  text-decoration: none; 
+/* === Link colors: research page === */
+a, a:link {
+  color: #924a42;
+  text-decoration: none;
 }
-a:visited { 
-  color: #026d73;               /* blue when visited */
+a:visited {
+  color: #026d73;
 }
-/* Place hover/focus AFTER visited so it wins on visited links too */
-a:hover, a:focus, a:visited:hover, a:visited:focus { 
-  color: #026d73;               /* darker red on hover */
-  text-decoration: underline; 
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #026d73;
+  text-decoration: underline;
 }
-
 
 @media (prefers-color-scheme: dark) {
-  a, a:link {
-    color: #6ecfd4;  /* lighter cyan version for better contrast in dark mode */
-  }
-  a:visited {
-    color: #6ecfd4;;  /* lighter red tone */
-  }
+  a, a:link  { color: #6ecfd4; }
+  a:visited  { color: #6ecfd4; }
 }
-
-
-
-

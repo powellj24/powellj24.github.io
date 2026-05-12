@@ -1,14 +1,26 @@
 /* colors = ["#cec5c1", "#9f8f7f", "#924a42", "#5a2028",
-        "#a4b9b1", "#4ea7a6", "#026d73", "#06494f"]; */
+        "#a4b9b1", "#4ea7a6", "#026d73", "#06494f"] */
 
 body {
     background-color: #fbfffe;
     }
 
   .bigname {
-    color: #06494f; 
+    color: #06494f;
   }
-  
+
+  hr { border-top-color: #9f8f7f; }
+  .changeTheme hr { border-top-color: #7a6a62; }
+
+  .site-header {
+    background-color: #fbfffe;
+    border-bottom: 1px solid rgba(0, 109, 115, 0.15);
+  }
+  .changeTheme .site-header {
+    background-color: #24262c;
+    border-bottom: 1px solid rgba(78, 167, 166, 0.15);
+  }
+
   h1 {
     color: #05383c;
   }
@@ -21,46 +33,36 @@ body {
     color: #02656b;
   }
 
-  div {
-    /* border: 3px solid #4ea7a6; */
-    /* background-color: #f8f3ee; */
-    background-color: #fbfffe;
-  }
-
-  /* a:link {
-    color: #428f8e;
-  }
-
-  a:hover {
-    color: #924a42;
-  }
-
-  a:visited {
-    color: #924a42;
-  } */
-
  /* Toggle Dark Theme */
 
  .button {
   background-color: #ddeae5;
-  border: 0px solid #06494f;
   color: #06494f;
 }
 
 .button:hover {
-  background-color:#e1aaa4;
+  background-color: #e1aaa4;
   color: #5a2028;
 }
 
+.changeTheme .button {
+  background-color: rgba(78, 167, 166, 0.15);
+  color: #4ea7a6;
+}
+
+.changeTheme .button:hover {
+  background-color: rgba(78, 167, 166, 0.25);
+  color: #a4b9b1;
+}
 
 #theme-btn {
   color: #06494f;
 }
 
-
 #theme-btn:hover {
   color: #5a2028;
 }
+
 .changeTheme {
   background: #24262c;
   color: #c8d5d0;
@@ -69,29 +71,23 @@ body {
 .changeTheme h1 { color: #a4b9b1; }
 .changeTheme h2 { color: #4ea7a6; }
 .changeTheme h3 { color: #4ea7a6; }
-.changeTheme div { background-color: #24262c; }
 .changeTheme #theme-btn { color: #4ea7a6; }
+.changeTheme .hero-links a { color: #a4b9b1; }
 
-/* === Link color scheme for blue theme (index.html) — robust hover === */
-a, a:link { 
-  color: #026d73;               /* blue default */
-  text-decoration: none; 
+/* === Link colors: home page === */
+a, a:link {
+  color: #026d73;
+  text-decoration: none;
 }
-a:visited { 
-  color: #924a42;               /* red when visited */
+a:visited {
+  color: #924a42;
 }
-/* Place hover/focus AFTER visited so it wins on visited links too */
-a:hover, a:focus, a:visited:hover, a:visited:focus { 
-  color: #924a42;               /* darker blue on hover */
-  text-decoration: underline; 
+a:hover, a:focus, a:visited:hover, a:visited:focus {
+  color: #924a42;
+  text-decoration: underline;
 }
-
 
 @media (prefers-color-scheme: dark) {
-  a, a:link {
-    color: #f08080;  /* lighter cyan version for better contrast in dark mode */
-  }
-  a:visited {
-    color: #f08080;  /* lighter red tone */
-  }
+  a, a:link  { color: #f08080; }
+  a:visited  { color: #f08080; }
 }

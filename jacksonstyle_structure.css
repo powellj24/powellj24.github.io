@@ -1,48 +1,172 @@
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
     }
 
   .bigname {
-    font-size: 200%; 
+    font-size: 200%;
+    font-weight: 700;
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid;
+    width: 94%;
+    margin: 0.5rem 3%;
+  }
+
+  .lab-dates {
+    font-size: 0.65em;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
   
   h1 {
     margin-left: 3%;
     margin-right: 3%;
+    font-weight: 600;
+    letter-spacing: -0.02em;
   }
 
   h2 {
+    margin-top: 3.5rem;
+    margin-bottom: 0.5rem;
     margin-left: 3%;
     margin-right: 3%;
+    font-weight: 600;
+    letter-spacing: -0.015em;
   }
 
   h3 {
     margin-left: 0%;
     margin-right: 0%;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 
   p.type1 {
-    line-height: 1.3;
     margin-left: 3%;
     margin-right: 3%;
   }
 
   p.type2 {
-    line-height: 1.3;
     margin-left: 3%;
     margin-right: 25%;
   }
 
   p.type3 {
-    line-height: 1.3;
     margin-left: 3%;
     margin-right: 3%;
-    display: inline-block; 
+    display: inline-block;
   }
 
-  div {
-    margin-left: 22%;
-    margin-right: 22%;
+  body > div {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ── Sticky header ── */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 3%;
+  }
+
+  .site-header .bigname {
+    font-size: 1.75rem;
+    margin: 0;
+    letter-spacing: normal;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 4px 2px;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2.5rem 3% 2rem;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-affil {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0 0 0.6rem;
+  }
+
+  .hero-contact {
+    font-size: 0.9rem;
+    margin: 0 0 0.25rem;
+    opacity: 0.65;
+  }
+
+  .hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 1.1rem;
+  }
+
+  .hero-links a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 3px 11px;
+    border-radius: 100px;
+    border: 1px solid currentColor;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+  }
+
+  .hero-links a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .hero-photo {
+    flex-shrink: 0;
+  }
+
+  .photo-credit {
+    font-size: 0.65rem;
+    opacity: 0.5;
+    margin: 0.75rem 0 0;
+    line-height: 1.3;
+    text-align: left;
+    max-width: 220px;
+  }
+
+  .hero-photo img {
+    width: 260px;
+    height: auto;
+    display: block;
   }
 
   a:link {
@@ -58,24 +182,26 @@ body {
  /* Toggle Dark Theme */
 
  .button {
-  padding: 8px 16px;
+  padding: 5px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 2px;
   cursor: pointer;
-  border-radius: 0px; /* to set curve */
-  vertical-align: bottom;
-}
-
-.button:hover {
-  transition: 0.7s;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  vertical-align: middle;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
 #theme-btn {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   cursor: pointer;
+  vertical-align: middle;
+  margin-left: 4px;
+  transition: color 0.15s ease;
 }
 
 .changeTheme {
@@ -107,13 +233,15 @@ body {
 img.leftinlineimg {
   width: 50%;
   height: auto;
-  float:left; 
+  float: left;
+  margin-right: 1.25rem;
 }
 
 img.rightinlineimg {
   width: 50%;
   height: auto;
-  float:right; 
+  float: right;
+  margin-left: 1.25rem;
 }
 
 
@@ -135,8 +263,8 @@ img.rightinlineimg {
 /* ==== Publications: theme-aware variables ==== */
 :root {
   /* Light mode */
-  --pub-bg: #dac3b9;                 /* your box color */
-  --pub-text: #3b1a1c;               /* dark text on light box */
+  --pub-bg: #dac3b9;
+  --pub-text: #3b1a1c;
   --pub-shadow: rgba(0,0,0,.08);
   --pub-btn-bg: rgba(255,255,255,.9);
   --pub-btn-text: #5a2028;
@@ -145,8 +273,8 @@ img.rightinlineimg {
 
 .changeTheme {
   /* Dark mode */
-  --pub-bg: #5a4347;                 /* slightly deeper so it reads on dark page */
-  --pub-text: #fff3f1;               /* light text on pink box */
+  --pub-bg: #5a4347;
+  --pub-text: #fff3f1;
   --pub-shadow: rgba(0,0,0,.45);
   --pub-btn-bg: rgba(255,255,255,.12);
   --pub-btn-text: #e6dfdc;
@@ -155,13 +283,12 @@ img.rightinlineimg {
 
 /* ==== Publications layout (theme-aware) ==== */
 /* Make section align with the main text column and neutralize the global div margins */
-#publications { width: 94%; margin: 0 3% 2rem 3%; }
-#publications div { margin-left: 0 !important; margin-right: 0 !important; background: transparent; }
+#publications, #misc-publications { width: auto; margin: 0 3% 2rem 3%; }
 
 /* One full-width card per row */
-#publications .pub-grid { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
+#publications .pub-grid, #misc-publications .pub-grid { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
 
-#publications .pub-card {
+#publications .pub-card, #misc-publications .pub-card {
   width: 100%;
   display: grid;
   grid-template-columns: 160px 1fr;
@@ -177,30 +304,36 @@ img.rightinlineimg {
 /* ensure children don’t pick up site-wide backgrounds, widths, etc. */
 #publications .pub-card *,
 #publications .pub-card *::before,
-#publications .pub-card *::after { box-sizing: border-box; background: transparent; }
+#publications .pub-card *::after,
+#misc-publications .pub-card *,
+#misc-publications .pub-card *::before,
+#misc-publications .pub-card *::after { box-sizing: border-box; background: transparent; }
 
-#publications .pub-thumb {
+#publications .pub-thumb,
+#misc-publications .pub-thumb {
   display: block;
   border-radius: 8px;
   overflow: hidden;
-  width: 100%; /* Optional: defines thumbnail width in grid */
+  width: 100%;
   max-width: 160px;
 }
 
-#publications .pub-thumb img {
+#publications .pub-thumb img,
+#misc-publications .pub-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-#publications .pub-meta { display:flex; flex-direction:column; gap:10px; }
-#publications .pub-citation { margin:0; line-height:1.4; color: inherit; }
-#publications .pub-citation a { color: inherit; text-decoration: underline; }
+#publications .pub-meta, #misc-publications .pub-meta { display:flex; flex-direction:column; gap:10px; }
+#publications .pub-citation, #misc-publications .pub-citation { margin:0; line-height:1.4; color: inherit; }
+#publications .pub-citation a, #misc-publications .pub-citation a { color: inherit; text-decoration: underline; }
 
 /* Buttons that adapt to theme */
-#publications .pub-links { display:flex; flex-wrap:wrap; gap:8px; }
-#publications .pub-btn {
+#publications .pub-links, #misc-publications .pub-links { display:flex; flex-wrap:wrap; gap:8px; }
+#publications .pub-btn,
+#misc-publications .pub-btn {
   display:inline-block;
   padding:6px 10px;
   border-radius:8px;
@@ -210,22 +343,21 @@ img.rightinlineimg {
   color: var(--pub-btn-text);
   transition: transform .05s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
-#publications .pub-btn:hover {
+#publications .pub-btn:hover,
+#misc-publications .pub-btn:hover {
   transform: translateY(-1px);
   background: rgba(255,255,255,.98);
   color: #5a2028;
   border-color: rgba(0,0,0,.2);
 }
-.changeTheme #publications .pub-btn:hover {
+.changeTheme #publications .pub-btn:hover,
+.changeTheme #misc-publications .pub-btn:hover {
   background: rgba(255,255,255,.18);
   color: #fff3f1;
   border-color: rgba(255,255,255,.35);
 }
 
-/* One full-width card per row */
-#publications .pub-grid { display: grid; grid-template-columns: 1fr; row-gap: 16px; }
-
 @media (max-width: 640px) {
-  #publications .pub-card { grid-template-columns: 1fr; }
-  #publications .pub-thumb { height: 220px; }   /* sensible cap for phones */
+  #publications .pub-card, #misc-publications .pub-card { grid-template-columns: 1fr; }
+  #publications .pub-thumb, #misc-publications .pub-thumb { height: 220px; }
 }
