@@ -109,7 +109,7 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 2.5rem;
-    padding: 2.5rem 3% 2rem;
+    padding: 4rem 3% 2rem;
   }
 
   .hero-text {
@@ -164,7 +164,7 @@ body {
   }
 
   .hero-photo img {
-    width: 260px;
+    width: 310px;
     height: auto;
     display: block;
   }

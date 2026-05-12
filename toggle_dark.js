@@ -1,15 +1,17 @@
 // toggle_dark.js
 (function () {
-  // Elements
   const ready = fn => (document.readyState !== 'loading') ? fn() : document.addEventListener('DOMContentLoaded', fn);
 
   ready(() => {
     const btn = document.getElementById('theme-btn');
     if (!btn) return;
 
-    // 1) Apply saved preference on load
-    const saved = localStorage.getItem('theme'); // 'dark' | 'light' | null
-    if (saved === 'dark') {
+    // Resolve preference: stored choice wins, otherwise follow OS
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const useDark = saved === 'dark' || (saved === null && prefersDark);
+
+    if (useDark) {
       document.body.classList.add('changeTheme');
       btn.classList.remove('fa-moon');
       btn.classList.add('fa-sun');
@@ -19,7 +21,7 @@
       btn.classList.add('fa-moon');
     }
 
-    // 2) Toggle + persist on click
+    // Toggle + persist on click
     btn.addEventListener('click', () => {
       const isDark = document.body.classList.toggle('changeTheme');
       btn.classList.toggle('fa-sun', isDark);

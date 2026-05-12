@@ -86,8 +86,3 @@ a:hover, a:focus, a:visited:hover, a:visited:focus {
   color: #924a42;
   text-decoration: underline;
 }
-
-@media (prefers-color-scheme: dark) {
-  a, a:link  { color: #f08080; }
-  a:visited  { color: #f08080; }
-}
