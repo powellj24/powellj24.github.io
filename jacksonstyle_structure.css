@@ -47,7 +47,7 @@ body {
     letter-spacing: 0.01em;
   }
 
-  p.type1 {
+  p.type1, ul.type1 {
     margin-left: 3%;
     margin-right: 3%;
   }
