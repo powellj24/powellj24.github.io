@@ -27,7 +27,8 @@ body { line-height: 1.65; }
   }
 
   .hero { flex-direction: column-reverse; gap: 1.5rem; padding: 1.5rem 3% 1rem; }
-  .hero-photo img { width: 160px; display: block; margin: 0 auto; }
+  .hero-photo { width: 100%; }
+  .hero-photo img { width: 100%; height: auto; display: block; border-radius: 8px; }
   .photo-credit { text-align: center; max-width: 100%; margin: 0.5rem auto 0; }
 }
 
