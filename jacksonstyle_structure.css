@@ -108,12 +108,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2.5rem;
-    padding: 4rem 3% 2rem;
+    column-gap: 2.5rem;
+    padding: 4rem 3% 0;
   }
 
-  .hero-text {
-    flex: 1;
+  .hero + #introduction {
+    margin-top: 0;
   }
 
   .hero-affil {
@@ -150,8 +150,25 @@ body {
     text-decoration: none;
   }
 
-  .hero-photo {
-    flex-shrink: 0;
+  .hero-quote {
+    margin: 2.5rem 0 0;
+    padding-block-end: 1lh;
+    text-align: left;
+  }
+
+  @media (width > 600px) {
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 310px;
+    }
+
+    .hero-photo {
+      display: contents;
+    }
+
+    .hero-quote {
+      grid-column: 2;
+    }
   }
 
   .photo-credit {
@@ -164,7 +181,7 @@ body {
   }
 
   .hero-photo img {
-    width: 310px;
+    width: 100%;
     height: auto;
     display: block;
   }
